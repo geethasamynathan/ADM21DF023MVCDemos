@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EFDemo.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Salary)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(m => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(m => item.Gender)
+    <td>
+        @Html.DisplayFor(m => item.city)
+    </td>
+    <td>
+        @Html.DisplayFor(m => item.Salary)
+    </td>
+   
+</tr>
+    }
+</table>

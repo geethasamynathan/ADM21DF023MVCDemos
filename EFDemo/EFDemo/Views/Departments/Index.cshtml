@@ -1,0 +1,13 @@
+﻿@model IEnumerable<EFDemo.Models.Department>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Department List</h2>
+<ul>
+    @foreach (var dept in Model)
+    {
+        <li> @Html.ActionLink(dept.Name, "Index", "Employees", new { departmentid = dept.Id }, null)</li>
+    }
+</ul>
+
